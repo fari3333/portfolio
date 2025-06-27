@@ -86,7 +86,7 @@
     width: 300px;
     max-width: 100%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 70%;
     transform: translate(-50%, -30%);
     z-index: 10;
