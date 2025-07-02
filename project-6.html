@@ -3,46 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title — Fari Adepetu</title>
+  <title>Stars and Stripes</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  color: #123c4a;
+  overflow: hidden; /* Default: no scroll on desktop */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === SECTION WRAPPER === */
+.flag-project-section {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #fff5e5;
+  font-size: 0.9rem;
+  color: #555;
+  flex-shrink: 0;
+}
+
+/* === VIDEO === */
+.flag-video {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+}
+
+.flag-video video {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: none;
+  box-shadow: none;
+}
+
+/* === TEXT === */
+.project-text {
+  flex: 1 1 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-text h1 {
+  font-family: 'Spike', sans-serif;
+  font-size: 2.8rem;
+  color: #f45b00;
+  margin-bottom: 1rem;
+}
+
+/* === MOBILE VIEWPORTS === */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;             /* Chrome/Safari */
+  }
+
+  body {
+    overflow-y: auto; /* Allow scroll on mobile */
+    height: auto;
+  }
+
+  .flag-project-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .flag-video {
+    order: 2;
+    width: 100%;
+    padding: 0;
+  }
+
+  .project-text {
+    order: 1;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .project-text h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Optional: hide scrollbar on mobile */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+  </style>
 </head>
+
 <body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-    </nav>
-  </header>
+  <section class="flag-project-section">
+    <!-- VIDEO -->
+    <div class="flag-video">
+      <video autoplay loop muted playsinline preload="auto">
+        <source src="videos/starsandstripesvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <div class="flag-video">
-    <video controls width="100%">
-      <source src="videos/starsandstripesvideo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-   
+    <!-- TEXT -->
+    <div class="project-text">
+      <h1>Stars and Stripes</h1>
+      <p><strong>Medium:</strong> Website </p>
+      <p><strong>Date:</strong> December 2025</p>
+      <p>
+        <em>Stars and Stripes</em> is a living archive built around the U.S. flag. This website transforms the flag into an interactive digital space where each star links to artistic interpretations of the flag, and each stripe holds a thread of political or cultural relevance.
+      </p>
+      <p>
+        The stars feature works like David Hammons’ *African American Flag* and Jasper Johns’ iconic renditions, showing how artists have reframed the flag across time. The stripes bring in real-world events, like political rallies or public incidents — including the 2024 Butler, PA shooting, where the flag appeared in the background.
+      </p>
+    </div>
+  </section>
 
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
-        <h1>Stars and Stripes</h1>
-        <p><strong>Medium:</strong> Website </p>
-        <p><strong>Date:</strong> December 2025</p>
-        <p>Stars and Stripes is a living archive built around the U.S. flag. This website transforms the flag into an interactive digital space where each star links to artistic interpretations of the flag and each stripe holds a thread of political or cultural relevance.
-            The stars feature work like David Hammons’ African American Flag and Jasper Johns’ iconic renditions, showing how artists have reframed the flag across time. The stripes bring in real-world events, like political rallies or public incidents, including the 2024 Butler, PA shooting where the flag appeared in the background.</p>
-       
-      </div>
-     
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Fari Adepetu. All rights reserved.</p>
-    </footer>
-  </body>
-  </html>
-  
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Fari Adepetu. All rights reserved.</p>
+  </footer>
+</body>
+</html>

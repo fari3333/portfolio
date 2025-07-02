@@ -3,45 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title — Fari Adepetu</title>
+  <title>AfriCOBRA Poster</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
 </head>
-<body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#resume">Resume</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <style>
+    .project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
-        <h1>AfriCOBRA</h1>
-        <p><strong>Medium:</strong> Poster </p>
-        <p><strong>Date:</strong> November 2024</p>
-        <p>This poster is a typographic tribute to AfriCOBRA, the African Commune of Bad Relevant Artists. Founded in 1968 during the Black Arts Movement, the collective called for a new Black aesthetic rooted in community, pride, and political urgency. I pulled direct language from the AfriCOBRA manifesto to shape the composition, using text as both message and material.
-            The design plays with angle, scale, and weight to create a sense of movement and depth. Bold, overlapping typography and a limited palette of red, yellow, and black reflect the energy and visual language of the collective’s work, especially the iconic Wall of Respect. This piece channels the manifesto’s values and turns them into a visual statement about identity, resistance, and joy.</p>
-       
-      </div>
-      <!-- IMAGE SIDE -->
-      <div class="project-media">
-        <img src="images/poster1.png" alt="Description of project image" />
-      </div>
-    </div>
-  </main>
+.project-description {
+  flex: 1;
+  text-align: left;
+}
+
+.project-media {
+  flex-shrink: 0;
+}
+
+    .project-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      display: flex;
+      max-width: 1200px;
+      margin: 3rem auto;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .project-thumbnail {
+      width: 400px;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .project-description {
+      flex: 1;
+    }
+
+    .project-description h1 {
+      font-family: 'Spike', sans-serif;
+      font-size: 3rem;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .project-description p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--dark-navy);
+    }
+
+    .image-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .image-gallery img {
+      height: 250px;
+      border-radius: 8px;
+      scroll-snap-align: center;
+    }
+
+    .back-button {
+      margin-top: 2rem;
+      background-color: var(--orange);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background-color: var(--red);
+    }
+  </style>
+</head>
+<body>
+ <!-- Main Content -->
+<div class="project-content">
+  <!-- Description LEFT -->
+  <div class="project-description">
+    <h1>AfriCOBRA Poster</h1>
+    <p><strong>Medium:</strong> Poster</p>
+    <p><strong>Date:</strong> November 2024</p>
+    <p>
+      This poster is a typographic tribute to AfriCOBRA, the African Commune of Bad Relevant Artists. Founded in 1968 during the Black Arts Movement, the collective called for a new Black aesthetic rooted in community, pride, and political urgency. I pulled direct language from the AfriCOBRA manifesto to shape the composition, using text as both message and material.
+      The design plays with angle, scale, and weight to create a sense of movement and depth. Bold, overlapping typography and a limited palette of red, yellow, and black reflect the energy and visual language of the collective’s work, especially the iconic Wall of Respect. This piece channels the manifesto’s values and turns them into a visual statement about identity, resistance, and joy.
+    </p>
+  </div>
+
+  <!-- Thumbnail RIGHT -->
+  <div class="project-media">
+    <img src="images/12.jpg" alt="Description of project image" class="project-thumbnail" />
+  </div>
+</div>
+
+
+<!-- Back Button & Logo -->
+<div style="margin-top: 2rem; text-align: center;">
+  <a href="index.html" class="back-button">Back to Home</a>
+  <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto; margin-left: 1rem;" />
+</div>
+
+
   <!-- FOOTER -->
   <footer>
     <a href="resume.pdf" download>Download Resume (PDF)</a>

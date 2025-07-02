@@ -3,44 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>U.S. Flag Code — Fari Adepetu</title>
+  <title>U.S. Flag Code</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+    /* === GLOBAL STYLES === */
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: #123c4a;
+      overflow: hidden; /* prevent scroll on desktop */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 0.5rem 1rem;
+      background-color: #fff5e5;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* === SECTION LAYOUT === */
+    .flag-project-section {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* === VIDEO === */
+    .flag-video {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 100%;
+    }
+
+    .flag-video video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border: none;
+      box-shadow: none;
+    }
+
+    /* === TEXT === */
+    .project-text {
+      flex: 1 1 50%;
+      padding: 2rem;
+      box-sizing: border-box;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-text h1 {
+      font-family: 'Spike', sans-serif;
+      font-size: 2.8rem;
+      color: #f45b00;
+      margin-bottom: 1rem;
+    }
+
+    .project-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #fff5e5;
+      font-size: 0.9rem;
+      color: #555;
+      flex-shrink: 0;
+    }
+
+    /* === MOBILE RESPONSIVE === */
+    @media (max-width: 768px) {
+      body {
+        overflow-y: auto;
+        height: auto;
+      }
+
+      .flag-project-section {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .flag-video {
+        order: 2;
+        width: 100%;
+        padding: 0;
+      }
+
+      .flag-video video {
+        width: 100%;
+        height: auto;
+      }
+
+      .project-text {
+        order: 1;
+        padding: 1.5rem;
+        text-align: left;
+      }
+
+      .project-text h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-    </nav>
-  </header>
 
-
+  <!-- MAIN PROJECT SECTION -->
+  <section class="flag-project-section">
+    <!-- VIDEO -->
     <div class="flag-video">
-      <video controls width="100%">
+      <video autoplay loop muted playsinline>
         <source src="videos/flag code video (1).mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-     
+    </div>
 
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
-        <h1>U.S. Flag Code</h1>
-        <p><strong>Medium:</strong> Website </p>
-        <p><strong>Date:</strong> January 2025</p>
-        <p>This project reimagines the U.S. Flag Code as a readable, interactive site. The original document is dense and legalistic, but the flag itself is everywhere—on buildings, clothing, packaging. I wanted to bridge that gap and create an experience that feels both accessible and visually rooted in American design history.
-            The site uses a simple one-column layout and vintage-inspired typography to bring clarity and tone. The goal was to take the flag code out of its legal shell and into cultural context through layout, type choices, and an emphasis on readability. This project sits at the intersection of civic education, design history, and national symbolism.
-        </p>
-       
-      </div>
-  </main>
+    <!-- TEXT DESCRIPTION -->
+    <div class="project-text">
+      <h1>U.S. Flag Code</h1>
+      <p><strong>Medium:</strong> Website </p>
+      <p><strong>Date:</strong> January 2025</p>
+      <p>
+        This project reimagines the U.S. Flag Code as a readable, interactive site. The original document is dense and legalistic, but the flag itself is everywhere—on buildings, clothing, packaging. I wanted to bridge that gap and create an experience that feels both accessible and visually rooted in American design history.
+      </p>
+      <p>
+        The site uses a simple one-column layout and vintage-inspired typography to bring clarity and tone. The goal was to take the flag code out of its legal shell and into cultural context through layout, type choices, and an emphasis on readability. This project sits at the intersection of civic education, design history, and national symbolism.
+      </p>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Fari Adepetu. All rights reserved.</p>
   </footer>

@@ -3,58 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title — Fari Adepetu</title>
+  <title>Sòrò Sókè</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
 </head>
+  <style>
+    .project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.project-description {
+  flex: 1;
+  text-align: left;
+}
+
+.project-media {
+  flex-shrink: 0;
+}
+
+    .project-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      display: flex;
+      max-width: 1200px;
+      margin: 3rem auto;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .project-thumbnail {
+      width: 400px;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .project-description {
+      flex: 1;
+    }
+
+    .project-description h1 {
+      font-family: 'Spike', sans-serif;
+      font-size: 3rem;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .project-description p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--dark-navy);
+    }
+
+    .image-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .image-gallery img {
+      height: 250px;
+      border-radius: 8px;
+      scroll-snap-align: center;
+    }
+
+    .back-button {
+      margin-top: 2rem;
+      background-color: var(--orange);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background-color: var(--red);
+    }
+
+    
+  </style>
+</head>
 <body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-    </nav>
-  </header>
+ <!-- Main Content -->
+<div class="project-content">
+  <!-- Description LEFT -->
+  <div class="project-description">
+    <h1>Sòrò Sókè</h1>
+    <p><strong>Medium:</strong> Merch Design</p>
+    <p><strong>Date:</strong> October 2024</p>
+    <p>
+      This typography-focused merch project was inspired by the first protest I ever attended in London in October 2021, held in response to police brutality in Nigeria. Sorosoke, which means “speak up” in Yoruba, became a powerful mantra that I brought into my design process.
+    </p>
+    <p>
+      The hand-drawn letterforms and accent marks reflect both the energy of the slogan and its cultural weight. As I developed the project, I added symbolic elements to give the design more depth: a fist rising from the “k,” an evil eye in the “o,” and a figure speaking in the shape of the “e.”
+    </p>
+  </div>
 
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
-        <h1>Sòrò Sókè</h1>
-        <p><strong>Medium:</strong>  Merch Design </p>
-        <p><strong>Date:</strong> October 2024 </p>
-        <p>This typography-focused merch project was inspired by the first protest I ever attended in London in October 2021, held in response to police brutality in Nigeria. Sorosoke, which means “speak up” in Yoruba, became a powerful mantra that I brought into my design process.</p>
-        <!-- OPTIONAL EMBEDDED MEDIA -->
-        <!-- <video controls src="media/project-video.mp4"></video> -->
-        <!-- <audio controls src="media/project-audio.mp3"></audio> -->
-      </div>
-      <!-- IMAGE SIDE -->
-      <div class="project-media">
-        <img src="images/protest.jpg" alt="Description of project image" />
-      </div>
-      <p>The hand-drawn letterforms and accent marks reflect both the energy of the slogan and its cultural weight. As I developed the project, I added symbolic elements to give the design more depth: a fist rising from the “k,” an evil eye in the “o,” and a figure speaking in the shape of the “e.”</p>
-      <div class="project-media">
-        <img src="images (1)/1.png" alt="Description of project image" />
-      </div>
-    </div>
-  </main>
+  <!-- Thumbnail RIGHT -->
+  <div class="project-media">
+    <img src="images/protest.jpg" alt="Description of project image" class="project-thumbnail" />
+  </div>
+</div>
 
-  <section class="carousel-section"></section>
-    <h2>Gallery</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="images/5.png" alt="Gallery image 1" />
-        <img src="images/6.png" alt="Gallery image 2" />
-        <img src="images/7.png" alt="Gallery image 3" />
-        <img src="images/8.png" alt="Gallery image 4" />
-        <img src="images/9.png" alt="Gallery image 5" />
-        <img src="images/10.png" alt="Gallery image 6" />
-      </div>
-    </div>
-  </section>
+<!-- Image Gallery at Bottom -->
+<div class="image-gallery">
+  <img src="images/Soro5.jpg" alt="Gallery Image 1" />
+  <img src="images/Soro6.jpg" alt="Gallery Image 2" />
+  <img src="images/Soro7.jpg" alt="Gallery Image 3" />
+  <img src="images/Soro8.jpg" alt="Gallery Image 4" />
+  <img src="images/Soro9.jpg" alt="Gallery Image 5" />
+  <img src="images/Soro10.jpg" alt="Gallery Image 6" />
+</div>
+
+<!-- Back Button & Logo -->
+<div style="margin-top: 2rem; text-align: center;">
+  <a href="index.html" class="back-button">Back to Home</a>
+  <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto; margin-left: 1rem;" />
+</div>
+
+
   <!-- FOOTER -->
   <footer>
     <a href="resume.pdf" download>Download Resume (PDF)</a>

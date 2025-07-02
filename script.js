@@ -1,21 +1,17 @@
-// === SMOOTH SCROLL AND ACTIVE NAV LINK ===
-const navLinks = document.querySelectorAll('.navbar a');
-const sections = document.querySelectorAll('section');
 
-window.addEventListener('scroll', () => {
-  let current = '';
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab");
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute('id');
-    }
-  });
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const targetId = tab.getAttribute("data-target");
+      const targetSection = document.getElementById(targetId);
+      targetSection.scrollIntoView({ behavior: "smooth" });
 
-  navLinks.forEach((link) => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+      // Mark active
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+    });
   });
 });
+

@@ -3,43 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title — Fari Adepetu</title>
+  <title>About the Black Panthers</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
 </head>
-<body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#resume">Resume</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <style>
+    .project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
-        <h1>About the Black Panthers</h1>
-        <p><strong>Medium:</strong> Spiral bound book </p>
-        <p><strong>Date:</strong> December 2024</p>
-        <p>This book is a visual and editorial exploration of the Black Panther Party, built from the text of its Wikipedia page. While the content came from an open source, I spent time shaping the visual direction to reflect the gravity, strength, and historical significance of the movement. .</p>
-       
-      </div>
-      <!-- IMAGE SIDE -->
-      <div class="project-media">
-        <img src="images (1)/3.png" alt="Description of project image" />
-      </div>
-    </div>
+.project-description {
+  flex: 1;
+  text-align: left;
+}
+
+.project-media {
+  flex-shrink: 0;
+}
+
+    .project-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      display: flex;
+      max-width: 1200px;
+      margin: 3rem auto;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .project-thumbnail {
+      width: 400px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .project-description {
+      flex: 1;
+    }
+
+    .project-description h1 {
+      font-family: 'Spike', sans-serif;
+      font-size: 3rem;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .project-description p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--dark-navy);
+    }
+
+    .image-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+    .image-gallery img {
+      height: 300px;
+      scroll-snap-align: center;
+    }
+
+    .back-button {
+      margin-top: 2rem;
+      background-color: var(--orange);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background-color: var(--red);
+    }
+  </style>
+</head>
+<body>
+ <!-- Main Content -->
+<div class="project-content">
+  <!-- Description LEFT -->
+  <div class="project-description">
+    <h1>About the Black Panthers</h1>
+    <p><strong>Medium:</strong> Spiral bound book </p>
+    <p><strong>Date:</strong> December 2024</p>
+    <p>This book is a visual and editorial exploration of the Black Panther Party, built from the text of its Wikipedia page. While the content came from an open source, I spent time shaping the visual direction to reflect the gravity, strength, and historical significance of the movement.</p>
+    <p>The result is a carefully designed experience that honors the Panthers’ voice and vision.
+      The layout and style draw inspiration from the Black Panther newspaper. I used bold typography, black-and-white imagery, and strong page rhythm to echo the urgency and clarity of the Party’s messaging. The book walks through the organization’s origins, rise, and core aims, creating an accessible and impactful record of revolutionary activism.
+      
+  </p>
+  
+  
+  </div>
+  <!-- Thumbnail RIGHT -->
+  <div class="project-media">
+    <img src="images (1)/3.png" alt="Description of project image" />
+  </div>
+  </div>
+</div>
+
+<!-- Image Gallery at Bottom -->
+<div class="image-gallery">
+  <img src="images/about the black panthers15.png" alt="Gallery Image 1" />
+  <img src="images/about the black panthers17.png" alt="Gallery Image 3" />
+  <img src="images/about the black panthers18.png" alt="Gallery Image 4" />
+  <img src="images/about the black panthers19.png" alt="Gallery Image 5" />
+</div>
+
+<!-- Back Button & Logo -->
+<div style="margin-top: 2rem; text-align: center;">
+  <a href="index.html" class="back-button">Back to Home</a>
+  <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto; margin-left: 1rem;" />
+</div>
+
   </main>
   <!-- FOOTER -->
   <footer>

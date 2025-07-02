@@ -3,42 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title — Fari Adepetu</title>
+  <title>Taste of Nostalgia</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* prevent all scrolling */
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: var(--dark-navy);
+    }
+
+    .digital-project-section {
+      flex: 1;
+      display: flex;
+      align-items: center; /* vertical centering */
+      justify-content: center;
+      padding: 0;
+      background-color: white;
+    }
+
+    .digital-layout {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 2rem;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .digital-video {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    video {
+      height: 775px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: -45px; /* overlap footer slightly */
+      border: none;
+      box-shadow: none;
+    }
+
+    .digital-description {
+      flex: 1;
+      text-align: left;
+    }
+
+    .digital-description h1 {
+      font-family: 'Spike', sans-serif;
+      font-size: 2.8rem;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .digital-description p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 1rem 2rem;
+      text-align: center;
+      background-color: #fff5e5;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+  html, body {
+    height: auto;
+    overflow: auto; /* Enable scrolling */
+  }
+
+  .digital-project-section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .digital-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .digital-description {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .digital-video {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: -1rem;
+    margin-top: auto;
+  }
+
+  .digital-video video {
+    width: 90%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  footer {
+    position: static;
+    padding: 1rem;
+  }
+
+  html, body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
+  }
+
+  body::-webkit-scrollbar {
+    display: none;            
+  }
+
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-    </nav>
-  </header>
+  <section class="digital-project-section">
+    <div class="digital-layout">
+      <!-- Video on the left -->
+      <div class="digital-video">
+        <video autoplay muted loop playsinline class="no-shadow">
+          <source src="videos/Taste of Nostalgia Video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
+      <!-- Description on the right -->
+      <div class="digital-description">
         <h1>Taste of Nostalgia</h1>
         <p><strong>Medium:</strong> Digital Platform </p>
         <p><strong>Date:</strong> April 2025</p>
-        <p>Interactive AI-generated platform that invites users to build a personal memory landscape, piece by piece. The idea came from a single phrase—the taste of nostalgia—which instantly brought me back to cooking with my grandmother. From there, I began to imagine how memory, emotion, and visual style could be woven into a playful digital experience.
-            The design draws on retro aesthetics, referencing 8-bit games and early interface graphics. To get the most accurate outputs, I broke the memory into smaller parts: characters, colors, objects, seasons, and names. Each element is generated separately, letting the user curate and assemble their own nostalgic scene. The result is a dreamy collage of mood and memory, shaped by AI and personal storytelling.</p>
-       
-      </div>
-      <!-- IMAGE SIDE -->
-      <div class="project-media">
-        <img src="images (1)/5.png" alt="Description of project image" />
+          Interactive AI-generated platform that invites users to build a personal memory landscape, piece by piece. The idea came from a single phrase—the taste of nostalgia—which instantly brought me back to cooking with my grandmother. From there, I began to imagine how memory, emotion, and visual style could be woven into a playful digital experience.
+        </p>
+        <p>
+          The design draws on retro aesthetics, referencing 8-bit games and early interface graphics. To get the most accurate outputs, I broke the memory into smaller parts: characters, colors, objects, seasons, and names. Each element is generated separately, letting the user curate and assemble their own nostalgic scene. The result is a dreamy collage of mood and memory, shaped by AI and personal storytelling.
+        </p>
       </div>
     </div>
-  </main>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <a href="resume.pdf" download>Download Resume (PDF)</a>
     <p>&copy; 2025 Fari Adepetu. All rights reserved.</p>
   </footer>
 </body>

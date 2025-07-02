@@ -3,48 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title — Fari Adepetu</title>
+  <title>Asterisk Downtown</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="preload" href="VTCSpikeVF.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling on desktop */
+}
+
+.digital-project-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: var(--dark-navy);
+    }
+
+    .digital-project-section {
+      flex: 1;
+      display: flex;
+      align-items: center; /* vertical centering */
+      justify-content: center;
+      padding: 0;
+      background-color: white;
+    }
+
+    .digital-layout {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 2rem;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .digital-video {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    video {
+      height: 765px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: -55px; /* overlap footer slightly */
+      border: none;
+      box-shadow: none;
+    }
+
+    .digital-description {
+      flex: 1;
+      text-align: left;
+    }
+
+    .digital-description h1 {
+      font-family: 'Spike', sans-serif;
+      font-size: 2.8rem;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .digital-description p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 1rem 2rem;
+      text-align: center;
+      background-color: #fff5e5;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+      @media (max-width: 768px) {
+  html, body {
+    height: auto;
+    overflow: auto; /* Enable scrolling */
+  }
+
+  .digital-project-section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .digital-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .digital-description {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .digital-video {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: -0.75rem;
+    margin-top: auto;
+  }
+
+  .digital-video video {
+    width: 90%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  footer {
+    position: static;
+    padding: 1rem;
+  }
+
+  html, body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
+  }
+
+  body::-webkit-scrollbar {
+    display: none;            
+  }
+
+
+}
+
+  </style>
 </head>
 <body>
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto;" />
-      </a>
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#resume">Resume</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- PROJECT DETAIL SECTION -->
-  <main class="section project-page">
-    <div class="project-container">
-      <!-- TEXT SIDE -->
-      <div class="project-text">
-        <h1>Asterisk Downtown</h1>
-        <p><strong>Medium:</strong> Digital Platform </p>
-        <p><strong>Date:</strong> December 2024</p>
-        <p>Asterisk Downtown is a digital platform designed to support residents in Lower Manhattan as they navigate life with intermittent power and water. In response to local infrastructure challenges, this project focuses on clear communication, community coordination, and user-first design.
-            The platform includes real-time outage reports, a clean home dashboard, and a 24- and 48-hour schedule view to help residents plan ahead. A built-in task manager allows users to log actions, share responsibilities, and stay connected during disruptions. The visual language is simple and utilitarian, designed to reduce stress and offer clarity in times of uncertainty.</p>
-       
+  <section class="digital-project-section">
+    <div class="digital-layout">
+      <!-- Video on the left -->
+      <div class="digital-video">
+        <video autoplay muted loop playsinline class="no-shadow">
+          <source src="videos/Asterisk DT Video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <!-- IMAGE SIDE -->
-      <div class="project-media">
-        <img src="images (1)/4.png" alt="Description of project image" />
+
+      <!-- Description on the right -->
+      <div class="digital-description">
+        <h1>Asterisk Downtown</h1>
+        <p><strong>Medium:</strong> Digital Platform</p>
+        <p><strong>Date:</strong> December 2024</p>
+        <p>
+          Asterisk Downtown is a digital platform designed to support residents in Lower Manhattan as they navigate life with intermittent power and water. In response to local infrastructure challenges, this project focuses on clear communication, community coordination, and user-first design.
+        </p>
+        <p>
+          The platform includes real-time outage reports, a clean home dashboard, and a 24- and 48-hour schedule view to help residents plan ahead. A built-in task manager allows users to log actions, share responsibilities, and stay connected during disruptions. The visual language is simple and utilitarian, designed to reduce stress and offer clarity in times of uncertainty.
+        </p>
       </div>
     </div>
-  </main>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <a href="resume.pdf" download>Download Resume (PDF)</a>
     <p>&copy; 2025 Fari Adepetu. All rights reserved.</p>
   </footer>
 </body>
