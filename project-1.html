@@ -98,6 +98,55 @@
     .back-button:hover {
       background-color: var(--red);
     }
+    @media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .project-description {
+    text-align: center;
+  }
+
+  .project-description h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 0;
+  }
+}
+/* below 600px: smaller gallery images & padding */
+@media (max-width: 600px) {
+  .image-gallery {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .image-gallery img {
+    height: 150px;
+    scroll-snap-align: start;
+    border-radius: 6px;
+  }
+}
+.image-gallery {
+  -ms-overflow-style: none;  /* IE */
+  scrollbar-width: none;     /* Firefox */
+}
+.image-gallery::-webkit-scrollbar {
+  display: none;             /* WebKit */
+}
 
     
   </style>
@@ -134,17 +183,15 @@
   <img src="images/Soro10.jpg" alt="Gallery Image 6" />
 </div>
 
-<!-- Back Button & Logo -->
+<!-- Back Button -->
 <div style="margin-top: 2rem; text-align: center;">
   <a href="index.html" class="back-button">Back to Home</a>
-  <img src="images/mylogo.png" alt="Fari Adepetu Logo" style="height: 48px; width: auto; margin-left: 1rem;" />
 </div>
 
 
   <!-- FOOTER -->
   <footer>
-    <a href="resume.pdf" download>Download Resume (PDF)</a>
-    <p>&copy; 2025 Fari Adepetu. All rights reserved.</p>
+    <p>&copy; 2025 Fari Adepetu. <br> All rights reserved.</p>
   </footer>
 </body>
 </html>

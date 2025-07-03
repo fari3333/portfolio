@@ -15,3 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.hero-nav');
+  const btn = nav.querySelector('.hero-nav__toggle');
+
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    btn.setAttribute(
+      'aria-label',
+      nav.classList.contains('open') ? 'Close menu' : 'Open menu'
+    );
+  });
+
+  // Optional: close when a link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
+});
